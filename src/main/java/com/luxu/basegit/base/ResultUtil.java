@@ -8,6 +8,7 @@ package com.luxu.basegit.base;
 public class ResultUtil {
 
     /**成功且带数据**/
+    @SuppressWarnings("unchecked")
     public static Result success(Object object){
         Result result = new Result();
         result.setCode(ResultEnum.SUCCESS.getCode());
@@ -16,11 +17,13 @@ public class ResultUtil {
         return result;
     }
     /**成功但不带数据**/
+    @SuppressWarnings("unchecked")
     public static Result success(){
 
         return success(null);
     }
     /**失败**/
+    @SuppressWarnings("unchecked")
     public static Result error(Integer code,String msg){
         Result result = new Result();
         result.setCode(code);

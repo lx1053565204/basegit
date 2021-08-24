@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://10.40.102.94:3306/dev?characterEncoding=utf-8&useSSL=false
     username: root
-    password: 1234
+    password: root
 
 #mybatis的相关配置
 mybatis:
