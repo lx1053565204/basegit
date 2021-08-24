@@ -1,10 +1,12 @@
 mvn clean package  docker:build
 echo "当前docker 镜像："
-docker images
-echo "停止镜像："
+docker images | grep dockerspringboot
+echo "停止容器："
 docker stop myspring
-echo "删除 镜像："
+echo "删除容器："
 docker rm myspring
+echo "删除镜像："
+docker rmi dockerspringboot
 echo "启动容器----->"
 docker run --name myspring -p 8001:8001 -d dockerspringboot
 echo "启动服务成功！"
